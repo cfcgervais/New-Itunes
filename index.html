@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>New Itunes</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins|Poiret+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -9,34 +10,52 @@
     <script src="app.js"></script>
   </head>
   <body>
-      
-        <form class="form-inline form">
-            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-            <div class="form-group">
-            <input type="text" class="form-control" id="artist" placeholder="Artist Name"  onkeydown="if (event.keyCode == 13) { getMusic(); return false;}"/>
-            <button type="button" class="btn btn-warning" id="get-music-button" onclick="getMusic()">Get Music</button>
-            </div>
-        </form>
+    <h1 class="text-center header">Music is fun!</h1>  
+    <form class="form-inline form">
+        <div class="form-group">
+        <input type="text" class="form-control" id="artist" placeholder="Artist Name"  onkeydown="if (event.keyCode == 13) { getMusic(); return false;}"/>
+        <button type="button" class="btn btn-warning" id="get-music-button" onclick="getMusic()">Get Music</button>
         </div>
-        <div class="container">
+    </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" id="songList">
+            </div>
+        </div>
+    </div>
+    <!--<div class="songs">
+        <div class="song-container">
             <div class="row">
-                <div class="col-sm-12" id="songList">
+                <div class="col-sm-4">
+                    <div class="img-container">
+                        <img src="${song.albumArt}"/>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <ul id="song-list">
+                        <h3>${song.artist}</h3>
+                        <h5>${song.title}</h5>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fa fa-play fa-3x" onclick="document.getElementById('${index}').play();$(this).toggle();$(this).next().toggle()" id="${index}play"></i>
+                    <i class="fa fa-pause fa-3x" onclick="document.getElementById('${index}').pause();$(this).toggle();$('#${index}play').toggle()" style="display: none;"></i>
+                    <audio id="${index}" preload="none" >
+                        <source src="${song.preview}">
+                    </audio>
                 </div>
             </div>
-            
-        </div>
-        
-        <!--<div id="songs">-->
-        <!--  <div class="song-container">-->
-        <!--    <div class="img-container">-->
-        <!--      <img src="song.artworkUrl60"/>-->
-        <!--    </div>-->
-        <!--    <ul id="song-list">-->
-        <!--      <h3>Artist</h3>-->
-        <!--      <p>Song</p>-->
-        <!--    </ul>-->
-        <!--  </div> -->
-        <!--</div>  -->
-    
+        </div> 
+      </div>-->
 </body>
 </html>
+          
+          
+           
+      
+      
+            
+            
+        
+     

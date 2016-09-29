@@ -10,16 +10,16 @@ body {
   border: 2px solid gray;
   margin: 10px;
   border-radius: 7px;
-  padding: 10px;
+  
   font-family: 'Poiret One', cursive;
   background-color: rgba(91, 74, 57, 0.5);
   color:white;
-  display: flex;
-  justify-content: center;
+  
 }
 
 .img-container{
-    margin-top: 30px;
+    margin: 25px;
+    margin-left: 300px;
     border-radius: 7px;
 }
 
@@ -28,4 +28,11 @@ body {
     justify-content: center;
 }
     
+.header{
+  color: white;
+  font-family: 'Poiret One', cursive;
+}
 
+.playButton{
+  margin-top: 25px;
+}
