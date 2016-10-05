@@ -10,16 +10,14 @@ body {
   border: 2px solid gray;
   margin: 10px;
   border-radius: 7px;
-  
   font-family: 'Poiret One', cursive;
   background-color: rgba(91, 74, 57, 0.5);
   color:white;
-  
 }
 
 .img-container{
     margin: 25px;
-    margin-left: 300px;
+    margin-left: 280px;
     border-radius: 7px;
 }
 
@@ -36,3 +34,9 @@ body {
 .playButton{
   margin-top: 25px;
 }
+
+.list{
+  color: white;
+  font-family: 'Poiret One', cursive;
+}
+
