@@ -1,12 +1,11 @@
 function MyTunes(){
-    var myTracks = loadTracks();
-    var songData = [];
-    var playlist = [];
+    var songData = loadTracks();
+    var myList = [];
     
     this.getTracks = function(){
-        myTracks
         return songData
     }
+        
     
     this.addTrack = function(track){
         songData.push(track)
@@ -15,15 +14,13 @@ function MyTunes(){
     
     this.removeTrack = function(id){
         for(i=0; i < songData.length; i++){
-                var item = songData[i]
-                if(item.id == id){
-                songData.splice(i,1)
-                saveTracks()
-                return
-                   
-                }
+            var item = songData[i]
+            if(item.id == id){
+            songData.splice(i,1)
+            saveTracks()
+            return
+            }
         }
-
     }
     
     this.promoteTrack = function(id){
@@ -35,7 +32,7 @@ function MyTunes(){
         if(i > 0){
         songData.splice(i-1, 0, songData.splice(i,1)[0]);
         }
-        
+        saveTracks()
     }
     
     this.demoteTrack = function(id){
@@ -45,23 +42,23 @@ function MyTunes(){
             }
         }
         songData.splice(i+1, 0, songData.splice(i,1)[0]);
+        saveTracks()
     }
         
-        
-
-
-    
-    //Yep these guys deal with local storage
     function saveTracks(){
         localStorage.setItem('my-list', JSON.stringify(songData))
     }
 
     function loadTracks(){
-        playlist = localStorage.getItem('my-list')
+        var playlist = localStorage.getItem('my-list')
         if(playlist){
             playlist = JSON.parse(playlist)
-        
-        return playlist
+        } else {
+            playlist = [];
+        }
+        return playlist;
     }
 }
-}
+        
+                
+            
