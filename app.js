@@ -14,21 +14,21 @@ function myPlaylist(myTracks){
     for (var i = 0; i < myTracks.length; i++) {
         var song = myTracks[i]
         template += `<div class="songs">
-            <div class="song-container">
+            <div class="container-fluid song-container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
                         <div class="img-container">
                             <img src="${song.albumArt}"/>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
                         <ul id="song-list">
                             <h3>${song.artist}</h3>
                             <h5>${song.title}</h5>
                             <button class="btn-info" id="${song.id}" onclick="upSong(${song.id})">Up</button><button class="btn-warning" id="${song.id}" onclick="downSong(${song.id})">Down</button><button class="btn-danger" id="${song.id}" onclick="removeSong(${song.id})">Remove</button>
                         </ul>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
                         <i class="fa fa-play fa-4x playButton" onclick="document.getElementById('${index}').play();$(this).toggle();$(this).next().toggle()" id="${index}play"></i>
                         <i class="fa fa-pause fa-4x playButton" onclick="document.getElementById('${index}').pause();$(this).toggle();$('#${index}play').toggle()" style="display: none;"></i>
                         <audio id="${index}" preload="none" >
@@ -51,21 +51,21 @@ function drawSongs(arr){
     for (var i = 0; i < arr.length; i++) {
         var song = arr[i]
         template += `<div class="songs">
-                <div class="song-container">
+                <div class="container-fluid song-container">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <div class="img-container">
                                 <img src="${song.albumArt}"/>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <ul id="song-list">
                                 <h3>${song.artist}</h3>
                                 <h5>${song.title}</h5>
                             <button class="btn-success" id="${song.id}" onclick="getSong(${song.id})">Add to Playlist</button>
                             </ul>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <i class="fa fa-play fa-4x playButton" onclick="document.getElementById('${index}').play();$(this).toggle();$(this).next().toggle()" id="${index}play"></i>
                             <i class="fa fa-pause fa-4x playButton" onclick="document.getElementById('${index}').pause();$(this).toggle();$('#${index}play').toggle()" style="display: none;"></i>
                             <audio id="${index}" preload="none" >
