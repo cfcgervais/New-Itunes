@@ -10,7 +10,7 @@ var music = []
 function myPlaylist(myTracks){
     var template = '<h2 class="list">My Playlist</h2>'
     var mySongElem = document.getElementById('myList')
-    var index = 0;
+    var index = 100;
     for (var i = 0; i < myTracks.length; i++) {
         var song = myTracks[i]
         template += `<div class="songs">
